@@ -1,0 +1,36 @@
+define                   = -DPOSRES -DPOSRES_POPC
+integrator              = md
+dt                      = 0.002
+nsteps                  = 5000  ; 10ps
+nstxtcout               = 0     ; 10ps 
+nstvout                 = 0
+nstfout                 = 0
+nstcalcenergy           = 100
+nstenergy               = 0
+nstlog                  = 0
+;
+cutoff-scheme           = Verlet
+nstlist                 = 50
+rlist                   = 1.0
+vdwtype                 = Cut-off
+vdw-modifier            = None
+DispCorr                = EnerPres
+rvdw                    = 1.0
+coulombtype             = PME
+rcoulomb                = 1.0
+;
+tcoupl                  = v-rescale
+tc_grps                 = System
+tau_t                   = 1.0
+ref_t                   = 310
+;
+constraints             = h-bonds
+constraint_algorithm    = LINCS
+;
+nstcomm                 = 100
+comm_mode               = linear
+comm_grps               = System
+;
+gen-vel                 = yes
+gen-temp                = 310
+gen-seed                = -1
