@@ -1,0 +1,29 @@
+
+[ moleculetype ]
+;Potassium Ion
+; molname  nrexcl
+POT        3
+
+[ atoms ]
+; id    at_type     res_nr  res_name   at_name  cg_nr    charge      mass
+  1     POT_new         1      POT        POT      1     .78    39.09830 ; qtot = 1.000000
+
+
+[ moleculetype ]
+;Sodium Ion
+; molname  nrexcl
+SOD        3
+
+[ atoms ]
+; id    at_type     res_nr  res_name   at_name  cg_nr    charge      mass
+  1     SOD_new         1      SOD        SOD      1      .78   22.98977 ; qtot = 1.000000
+
+
+[ moleculetype ]
+;Chloride Ion
+; molname  nrexcl
+CLA        3
+
+[ atoms ]
+; id    at_type     res_nr  res_name   at_name  cg_nr    charge      mass
+  1     CLA_new         1      CLA        CLA      1     -.78   35.45000 ; qtot = -1.000000
