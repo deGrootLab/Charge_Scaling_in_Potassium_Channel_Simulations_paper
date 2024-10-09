@@ -1,0 +1,59 @@
+;
+;       File 'topol.top' was generated
+;       By user: chui (672814)
+;       On host: chui
+;       At date: Wed May 15 14:49:40 2024
+;
+;       This is a standalone topology file
+;
+;       Created by:
+;                           :-) GROMACS - gmx pdb2gmx, 2022.5 (-:
+;
+;       Executable:   /home/chui/Software-2023-04-11/GMX/2022.5-gcc12.3.0-cuda12.2-openmpi4.1.6/bin/gmx
+;       Data prefix:  /home/chui/Software-2023-04-11/GMX/2022.5-gcc12.3.0-cuda12.2-openmpi4.1.6
+;       Working dir:  /home/chui/E29Project-2023-04-11/076-MthK/22-AS3-POT-iso_radius/top
+;       Command line:
+;         gmx pdb2gmx -f start_chain_dry.pdb -o 01-pdb2gmx_protein.pdb -ignh
+;       Force field was read from current directory or a relative path - path added.
+;
+; base on this template, I added:
+; 1. ions
+; 2. POPC
+
+
+
+#include "../amber14sb_parmbsc1.ff/forcefield.itp"
+#include "ions_at_type.itp" ; new ions
+
+
+; Include chain topologies
+#include "topol_Protein_chain_A.itp"
+
+; Include chain topologies
+#include "../POPC.itp"
+
+; Include water topology
+#include "../amber14sb_parmbsc1.ff/tip3p.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "./ions.itp"
+
+[ system ]
+; Name
+MthK_A
+
+
+[ molecules ]
+; Compound        #mols
+Protein_chain_A       4
+K                   244
+POPC                169
+CL                  232
+SOL               16900
