@@ -8,7 +8,7 @@ forcefield.itp
 ions_at_type.itp
 ions.itp
 ```
-Only the following non-ternial residues have been scaled to 0.78.
+Only the following non-terminal residues have been scaled to 0.78.
 ```
 ASP
 LYS
