@@ -1,0 +1,28 @@
+; CHARMM-port for GROMACS
+; created with charmm2gmx version 0.6.dev1+g077b6a1 on 2021-10-05 08:46:25.066274
+; Code: https://gitlab.com/awacha/charmm2gmx
+; Documentation: https://awacha.gitlab.com/charmm2gmx
+; Charmm2GMX written by András Wacha, based on the original port by 
+; E. Prabhu Raman, Justin A. Lemkul, Robert Best and Alexander D. MacKerell, Jr.
+; Molecule types for ions
+
+
+
+[ moleculetype ]
+;Potassium Ion
+; molname  nrexcl
+POT        3
+
+[ atoms ]
+; id    at_type     res_nr  res_name   at_name  cg_nr    charge      mass
+  1     POT_new         1      POT        POT      1     K_CHARGE    39.09830 ; qtot = 1.000000
+
+
+[ moleculetype ]
+;Chloride Ion
+; molname  nrexcl
+CLA        3
+
+[ atoms ]
+; id    at_type     res_nr  res_name   at_name  cg_nr    charge      mass
+  1     CLA_new         1      CLA        CLA      1     -K_CHARGE   35.45000 ; qtot = -1.000000
