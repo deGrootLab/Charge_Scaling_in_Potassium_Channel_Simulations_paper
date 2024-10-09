@@ -1,0 +1,4 @@
+[ atomtypes ]
+; type        atnum   mass    charge    ptype  sigma            epsilon
+K_new         19    39.098300   0.000     A    SIGMA_POT        8.10369e-01 ; Amber Joung Cheatham 2008 K  3.03796e-01  8.10369e-01
+Cl_new        17    35.453000   0.000     A    SIGMA_CLA        1.48913e-01 ; Amber Joung Cheatham 2008 Cl 4.47766e-01  1.48913e-01
