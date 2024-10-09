@@ -1,0 +1,55 @@
+;
+;	File 'topol.top' was generated
+;	By user: chui (672814)
+;	On host: chui
+;	At date: Thu Apr 13 15:34:18 2023
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	          :-) GROMACS - gmx pdb2gmx, 2022.6-dev-20230203-d0bf2c1 (-:
+;	
+;	Executable:   /usr/local/gromacs/2022/2022.5-impi2017-fftw337-gcc94-cuda11.1/bin/gmx
+;	Data prefix:  /usr/local/gromacs/2022/2022.5-impi2017-fftw337-gcc94-cuda11.1
+;	Working dir:  /home/chui/E29Project-2023-04-11/054-NaK2K/04-Amber-lipid21/01-A_1.00/00-TOP/01-PRO
+;	Command line:
+;	  gmx pdb2gmx -f step5_input_proamber.pdb -o 01-pdb2gmx_pro.pdb -ignh
+;	Force field was read from current directory or a relative path - path added.
+;
+
+
+
+#include "../amber14sb_parmbsc1.ff/forcefield.itp"
+#include "ions_at_type.itp" ; new ions
+
+
+; Include chain topologies
+#include "topol_Protein_chain_A.itp"
+
+; Include chain topologies
+#include "../POPC.itp"
+
+; Include water topology
+#include "../amber14sb_parmbsc1.ff/tip3p.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "./ions.itp"
+
+[ system ]
+; Name
+Protein
+
+[ molecules ]
+; Compound        #mols
+Protein_chain_A     4
+K                 160 ; 160 / 11134 / (1/55.5) = 0.7976
+POPC              168
+CL                152
+SOL             11134
