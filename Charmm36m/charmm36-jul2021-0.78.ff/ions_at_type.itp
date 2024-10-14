@@ -2,4 +2,4 @@
 ; type        atnum   mass    charge    ptype  sigma            epsilon
 POT_new       19    39.098300   0.000     A    0.30032574   0.364008 ; CHARMM POT
 CLA_new       17    35.453000   0.000     A    0.39413736     0.6276 ; CHARMM CLA
-SOD_new       19    39.098300   0.000     A    0.24120320  0.1962296 ; CHARMM SOD
+SOD_new       11    22.989770   0.000     A    0.24120320  0.1962296 ; CHARMM SOD
