@@ -1,0 +1,7 @@
+[ moleculetype ]
+; molname       nrexcl
+CL              1
+
+[ atoms ]
+; id    at_type   res_nr  res_name     at_name  cg_nr    charge
+1       Cl_new        1         CL          CL      1   -0.75

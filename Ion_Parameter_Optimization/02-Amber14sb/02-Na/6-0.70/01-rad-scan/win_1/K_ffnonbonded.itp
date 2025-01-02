@@ -1,0 +1,3 @@
+[ atomtypes ]
+; name       at.num  mass     charge  ptype  sigma      epsilon
+Na_new          11      22.99    0.0000  A 0.230207050   3.65846e-01  ; Joung2008 TIP3P 2.43928e-01  3.65846e-01 
