@@ -1,0 +1,8 @@
+[ moleculetype ]
+;Potassium Ion
+; molname  nrexcl
+POT        3
+
+[ atoms ]
+; id    at type     res nr  res name   at name  cg nr  charge    mass
+  1     POT_new         1      POT        POT      1       0.60    39.09830 ; qtot = 1.000000
