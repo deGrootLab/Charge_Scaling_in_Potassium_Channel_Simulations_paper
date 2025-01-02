@@ -1,0 +1,9 @@
+[ moleculetype ]
+;Sodium Ion
+; molname  nrexcl
+SOD        3
+
+[ atoms ]
+; id    at type     res nr  res name   at name  cg nr  charge    mass
+  1     SOD_new         1      SOD        SOD      1       0.95    22.98977 ; qtot = 1.000000
+  

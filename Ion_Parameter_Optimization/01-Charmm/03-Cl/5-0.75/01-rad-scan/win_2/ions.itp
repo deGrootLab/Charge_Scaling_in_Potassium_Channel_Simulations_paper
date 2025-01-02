@@ -1,0 +1,9 @@
+
+[ moleculetype ]
+;Chloride Ion
+; molname  nrexcl
+CLA        3
+
+[ atoms ]
+; id    at_type     res_nr  res_name   at_name  cg_nr     charge    mass
+  1     CLA_new         1      CLA        CLA      1      -0.75    35.45000 ; qtot = -1.000000

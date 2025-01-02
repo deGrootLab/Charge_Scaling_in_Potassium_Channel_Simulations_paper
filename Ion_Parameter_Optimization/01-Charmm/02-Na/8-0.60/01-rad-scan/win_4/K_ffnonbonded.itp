@@ -1,0 +1,3 @@
+[ atomtypes ]
+; type atnum         mass   charge     ptype           sigma  epsilon
+SOD_new    11    22.989770    0.000     A  0.221203025   0.1962296  ; Charmm SOD 0.251367073323  0.1962296 
