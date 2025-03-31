@@ -1,0 +1,33 @@
+; Include forcefield parameters
+#include "../charmm36-jul2021.ff/forcefield.itp"
+#include "ions_at_type.itp"
+; Include chain topologies
+#include "KcsA.itp"
+#include "../POPC.itp"
+
+
+; Include water topology
+#include "../charmm36-jul2021.ff/tip3p.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+
+#include "ions.itp"
+
+[ system ]
+; Name
+Title
+
+[ molecules ]
+; Compound	#mols
+Protein 1
+POT   	         234; 800 mM
+POPC  	         153
+CLA   	         250
+SOL 	       16196
